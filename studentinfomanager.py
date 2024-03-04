@@ -18,20 +18,21 @@ if search_name in student_list:
 else:
     print("student not found")
 
-#Display all books
+#Display all student infos
 print("List of of students enrolled: ")
 for students in student_list:
     print(students)
 
-    #remove a book
-remove_student = input("Enter the name of the student to remove or else enter to skip: ")
+#remove a student  info
+remove_student = input("Do you want to remove a student info? if yes enter students name: ")
 if remove_student in student_list:
-    remove_student = student_dict[remove_student]
     student_list.remove(remove_student)
-    student_dict.remove(remove_student)
     del student_dict[remove_student]
     print("Student removed successfully")
     print("Student available: ", student_list)
+
+elif remove_student == "no":
+    print("Thank you for your time")
 
 else:
     print("Student not found")
