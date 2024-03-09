@@ -8,7 +8,7 @@ age = input("Enter student's age: ")
 grade = input("Enter student's grade: ")
 
 student_list.append(name)
-student_dict[name] = {age , grade}
+student_dict[name] = {'age' : age , 'grade' : grade}
 print("info added succesfully")
 
 #searching the student info
@@ -18,7 +18,7 @@ if search_name in student_list:
 else:
     print("student not found")
 
-#Display all student infos
+#Display all student info
 print("List of of students enrolled: ")
 for students in student_list:
     print(students)
